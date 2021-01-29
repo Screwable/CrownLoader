@@ -9,7 +9,7 @@ namespace CrownLoader
 {
     public static class Log
     {
-        public static void Message(LogType lt, string content)
+        public static void Message(LogType lt, params string[] content)
         {
             Console.ForegroundColor = SetColor(lt);
             string caller = Assembly.GetCallingAssembly().GetName().Name;
@@ -19,7 +19,7 @@ namespace CrownLoader
                 {
                     caller,
                     time,
-                    content
+                    string.Join("", content)
                 });
 
             Console.ResetColor();
@@ -36,7 +36,6 @@ namespace CrownLoader
                 default: return ConsoleColor.Gray;
             }
         }
-
     }
     public enum LogType
     {
