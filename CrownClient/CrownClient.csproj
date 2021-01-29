@@ -44,6 +44,12 @@
     <Reference Include="MelonLoader.ModHandler">
       <HintPath>D:\SteamLibrary\SteamApps\common\VRChat\MelonLoader\MelonLoader.ModHandler.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Photon-DotNet">
+      <HintPath>D:\SteamLibrary\SteamApps\common\VRChat\MelonLoader\Managed\Photon-DotNet.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -61,6 +67,10 @@
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>D:\SteamLibrary\SteamApps\common\VRChat\MelonLoader\Managed\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.IMGUIModule, Version=3.7.1.6, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SteamLibrary\SteamApps\common\VRChat\MelonLoader\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.InputModule, Version=3.7.1.6, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>D:\SteamLibrary\SteamApps\common\VRChat\MelonLoader\Managed\UnityEngine.InputModule.dll</HintPath>
@@ -68,6 +78,14 @@
     <Reference Include="UnityEngine.PhysicsModule, Version=3.7.1.6, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>D:\SteamLibrary\SteamApps\common\VRChat\MelonLoader\Managed\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI, Version=3.7.1.6, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SteamLibrary\SteamApps\common\VRChat\MelonLoader\Managed\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule, Version=3.7.1.6, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SteamLibrary\SteamApps\common\VRChat\MelonLoader\Managed\UnityEngine.UIModule.dll</HintPath>
     </Reference>
     <Reference Include="VRCCore-Standalone">
       <HintPath>D:\SteamLibrary\SteamApps\common\VRChat\MelonLoader\Managed\VRCCore-Standalone.dll</HintPath>
@@ -81,14 +99,26 @@
     <Reference Include="VRCSDK3">
       <HintPath>D:\SteamLibrary\SteamApps\common\VRChat\MelonLoader\Managed\VRCSDK3.dll</HintPath>
     </Reference>
+    <Reference Include="VRCSDKBase, Version=3.7.1.6, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\SteamLibrary\SteamApps\common\VRChat\MelonLoader\Managed\VRCSDKBase.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClientHook.cs" />
+    <Compile Include="Menu\Menu.cs" />
+    <Compile Include="PhotonUtils\ParameterKey.cs" />
+    <Compile Include="PhotonUtils\OperationCode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\ButtonHelper.cs" />
+    <Compile Include="Utils\Il2CppExtensions.cs" />
+    <Compile Include="Wrappers\MiscWrappers.cs" />
     <Compile Include="Utils\Patcher.cs" />
-    <Compile Include="Utils\PlayerWrappers.cs" />
-    <Compile Include="Utils\Settings.cs" />
+    <Compile Include="Wrappers\PhotonWrappers.cs" />
+    <Compile Include="Wrappers\PlayerWrappers.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
