@@ -3,8 +3,7 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using MelonLoader;
 
-
-[assembly: MelonInfo(typeof(CrownLoader.Loader), "CrownClient", "0.0.0.2", "God")]
+[assembly: MelonInfo(typeof(CrownLoader.Loader), "CrownClient", "0.5.1", "God")]
 [assembly: MelonGame("VRChat", "VRChat")]
 
 [assembly: AssemblyTitle("CrownClient")]
@@ -16,5 +15,5 @@ using MelonLoader;
 
 [assembly: Guid("ac712d04-4d11-47ee-a1eb-517a2de0e9b6")]
 
-[assembly: AssemblyVersion("0.0.0.2")]
+[assembly: AssemblyVersion("0.5.1")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
