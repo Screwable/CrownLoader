@@ -7,23 +7,37 @@ using System.Threading.Tasks;
 using MelonLoader;
 using CrownLoader;
 using UnityEngine;
+using UnityEngine.UI;
 using CrownClient.Utils;
 using VRC;
 using LogType = CrownLoader.LogType;
+using UnityEngine.SceneManagement;
+using VRC.SDKBase;
+using CrownClient.Wrappers;
+using CrownClient.PhotonUtils;
 
 namespace CrownClient
 {
     public class ClientHook : MelonMod
     {
-        private Settings _Settings;
-
         private void Initialize()
         {
             Console.Title = "CrownClient by .Nova";
             Log.Message(LogType.Success, $"Successfully loaded CrownClient v{Assembly.GetExecutingAssembly().GetName().Version}");
             MelonHandler.Mods.Add(this);
-            _Settings = new Settings();
             Patcher.Execute();
+        }
+
+        public override void OnUpdate()
+        {
+            if(Input.GetKeyDown(KeyCode.P))
+            {
+
+            }
+            if(Input.GetKeyDown(KeyCode.L))
+            {
+
+            }
         }
     }
 }
